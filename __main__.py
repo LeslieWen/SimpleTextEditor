@@ -1,6 +1,6 @@
 import sys
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QApplication, QMainWindow,QLineEdit
+from PyQt5 import *
+from PyQt5.QtWidgets import *
 
 class App(QMainWindow):
     def __init__(self):
@@ -11,13 +11,27 @@ class App(QMainWindow):
         self.width=900
         self.height=700
         self.initUI()
-    def initUI(self):
+
+    def initUI(self): 
         self.setWindowTitle(self.title)
         self.setGeometry(self.left,self.top,self.width,self.height)
-        self.show()
+        self.textbox = QLineEdit(self)        
+        self.textbox.resize(900,700)
+
+
+
+
+
+
+
+
+
+
+
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     ex = App()
+    ex.show()
     sys.exit(app.exec_())
 
